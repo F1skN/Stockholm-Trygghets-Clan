@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Stockholm Trygghet Clan</title>
+  <link rel="stylesheet" href="css/index.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Stockholm Trygghet Clan</h1>
+      <nav>
+        <ul>
+          <li><a href="#om">Om oss</a></li>
+          <li><a href="#ansokan">Ansökan</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="om" class="container">
+      <h2>Om Stockholm Trygghet Clan</h2>
+      <p>
+        Vi är en sammanslutning av engagerade personer som vill bidra till trygghet i Stockholm.
+        Vi samarbetar med polisen, ambulansen och räddningstjänsten för att skapa en säker miljö för alla.
+      </p>
+      <img src="images/team_photo.jpg" alt="Stockholm Trygghet Clan Team" />
+    </section>
+
+    <section id="ansokan" class="container">
+      <h2>Ansök till Stockholm Trygghet Clan</h2>
+      <form name="ansokan" method="POST" data-netlify="true" id="ansokanForm" novalidate>
+        <input type="hidden" name="form-name" value="ansokan" />
+        
+        <label for="name">Namn:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">E-post:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="department">Avdelning:</label>
+        <select id="department" name="department" required>
+          <option value="">Välj en avdelning</option>
+          <option value="polisen">Polisen</option>
+          <option value="ambulansen">Ambulansen</option>
+          <option value="raddning">Räddningstjänsten</option>
+        </select>
+
+        <label for="message">Meddelande:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Skicka ansökan</button>
+        <p class="form-message" id="ansokanMessage"></p>
+      </form>
+    </section>
+
+    <section id="kontakt" class="container">
+      <h2>Kontakta oss</h2>
+      <form name="kontakt" method="POST" data-netlify="true" id="kontaktForm" novalidate>
+        <input type="hidden" name="form-name" value="kontakt" />
+
+        <label for="contact-name">Namn:</label>
+        <input type="text" id="contact-name" name="name" required />
+
+        <label for="contact-email">E-post:</label>
+        <input type="email" id="contact-email" name="email" required />
+
+        <label for="contact-message">Meddelande:</label>
+        <textarea id="contact-message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Skicka meddelande</button>
+        <p class="form-message" id="kontaktMessage"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Stockholm Trygghet Clan. Alla rättigheter reserverade.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
